@@ -37,26 +37,15 @@ void handleNewMessages(int numNewMessages)
       servoStatus = 1;
        bot.sendMessage(chat_id, "Recieved", "");
     }
-    if (text == "/open");
+    if (text == "/open")
     {
-      myservo.write(0);
+      myservo.write(5);
       servoStatus = 0;
-       bot.sendMessage(chat_id, "Recieved", "");      
-    }
-    if (text == "/status")
-    {
-      if (servoStatus)
-      {
-        bot.sendMessage(chat_id, "CLOSED", "");
-      }
-      else
-      {
-        bot.sendMessage(chat_id, "OPENED", "");
-      }
+      bot.sendMessage(chat_id,"Recieved", "");
     }
     if (text == "/report")
     {
-      if(analogVal<900)
+      if(analogVal<2000)
       {
         bot.sendMessage(chat_id, "IT IS RAINING", "");
       }
@@ -72,7 +61,6 @@ void handleNewMessages(int numNewMessages)
       welcome += "/report : Returns current status of the weather\n";
       welcome += "/close : to close the motor\n";
       welcome += "/open : to open the motor\n";
-      welcome += "/status : Returns current status of the motor\n";
       bot.sendMessage(chat_id, welcome, "Markdown");
     }
     
