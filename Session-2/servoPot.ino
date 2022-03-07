@@ -6,7 +6,7 @@ int potpin = 32;  // analog pin used to connect the potentiometer
 int val;    // variable to read the value from the analog pin
 
 void setup() {
-  myservo.attach(26);  // attaches the servo on pin 9 to the servo object
+  myservo.attach(26);  // attaches the servo on pin 26 to the servo object
 }
 
 void loop() {
